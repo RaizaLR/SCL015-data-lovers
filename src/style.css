@@ -114,6 +114,11 @@
     border: 1px solid #000000;
   }
 
+  .aside{
+    display: flex;
+    flex-direction: row;
+    }
+
   .filters{
     background: rgba(196, 196, 196, 0.7);
     border: 1px solid #000000;
@@ -123,6 +128,10 @@
     padding-right: 5%;
     width: 10%;
     color: #000000;
+  }
+
+  .table{
+    width: 90%;
   }
 
   /* //responsive// */
