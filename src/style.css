@@ -50,6 +50,7 @@
   }
 
   .button{
+  text-decoration: none;
   background: #00b7f8;
   border-bottom: 5px solid #0045a6;
   border-radius: 12px;
@@ -78,54 +79,7 @@
   transform: translateY(4px);
   transition: all 0.1s ease 0s;}
 
-  /* //seccion personajes// */
-  .charactersSection{
-  display: none;
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;}
-
-  .header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .selectOrder{
-    display: flex;
-    flex-direction: column;
-    padding-top: 5%;
-    padding-bottom: 2%;
-  }
-  .charactersTitle{
-    display: flex;
-    font-size: 10vh;
-  }
-
-  .backButtons{
-    display: flex;
-    flex-direction: column;
-    padding-top: 1%;
-  }
-
-  .Btn{
-    width: 10vw;
-    height: 20%;
-    background: #C4C4C4;
-    border: 1px solid #000000;
-  }
-
-  .filters{
-    background: rgba(196, 196, 196, 0.7);
-    border: 1px solid #000000;
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-bottom: 20%;
-    padding-right: 5%;
-    width: 10%;
-    color: #000000;
-  }
-
-  /* //responsive// */
+      /* //responsive// */
   @media screen and (max-width: 414px) {
   .button {
   background: #00b7f8;
@@ -135,7 +89,7 @@
   color: #fff;
   cursor: pointer;
   display: flex;  
-  font-family: 'Raleway', Arial, Helvetica;
+  font-family: 'Roboto', sans-serif;
   font-size: 5vw;
   height: 8vw;
   padding: 1%;
@@ -146,7 +100,8 @@
   width: 30vw;
   margin-bottom: 80vw;
   } }
-
+      
+  
   @media screen and (max-width: 768px) {
   .button {
   background: #00b7f8;
@@ -156,7 +111,7 @@
   color: #fff;
   cursor: pointer;
   display: flex;  
-  font-family: 'Raleway', Arial, Helvetica;
+  font-family: 'Roboto', sans-serif;
   font-size: 5vw;
   height: 8vw;
   padding: 1%;

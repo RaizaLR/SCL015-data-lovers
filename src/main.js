@@ -4,19 +4,26 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, data);
 
-const charactersBtn = document.getElementById("charactersBtn");
-charactersBtn.addEventListener("click", function(){
-    const welcomeSection = document.getElementById("indexSection");
-    welcomeSection.style.display= "none";
-    const charactersSection = document.getElementById("charactersSection");
-    charactersSection.style.display= "block";
-})
+const table = document.getElementById("table");
 
-// // revisar boton de volver
-// const backBtn = document.getElementById("backBtn");
-// backBtn.addEventListener("click", function(){
-//     const charactersSection = document.getElementById("charactersSection");
-//     charactersSection.style.display= "none";
-//     const welcomeSection = document.getElementById("welcomePage");
-//     welcomeSection.style.display= "block";
-// })
+let tarjeta = document.createElement("DIV");
+
+table.appendChild(tarjeta);
+
+tarjeta.setAttribute("class", "cell");
+tarjeta.setAttribute("id", "card");
+
+let image = document.createElement("IMG");
+
+tarjeta.appendChild(image);
+
+image.setAttribute("src", data["results"][0]["image"]);
+
+image.setAttribute("class", "image");
+
+let name = document.createElement("P");
+
+tarjeta.appendChild(name);
+
+name.innerHTML = data["results"][0]["name"];
+

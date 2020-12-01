@@ -7,3 +7,8 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+// let nombres = {
+
+// }
+// console.log([name:0]);

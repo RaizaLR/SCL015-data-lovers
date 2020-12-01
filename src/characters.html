@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rick and Morty for Dummies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="characters.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <main class="flexcontainer">
+    <section class="charactersSection" id="charactersSection">
+        <header class="header">
+          <div class="selectOrder">
+          <label for="order" class="select">Ordenar</label>
+          <select name="order" id="select">
+            <option value="alphAscending">Alfabéticamente (A-Z)</option>
+            <option value="alphDescending">Alfabéticamente (Z-A)</option>
+          </select>
+        </div>
+          <h1 class="charactersTitle">Personajes</h1>
+          <div class="backButtons">
+          <a href="index.html" class="Btn one" id="backBtn">Volver</a>
+          <a href="" class="Btn one">Episodios</a>
+        </div>
+        </header>
+  
+        <div class="aside">
+        <aside class="filters">
+          <h2>Filtrar:</h2> <br>
+          <input type="checkbox" id="alien" name="alien" value="alien">
+          <label for="alien"> Alien</label><br>
+          <input type="checkbox" id="human" name="human" value="human">
+          <label for="human"> Humano</label><br>
+          <input type="checkbox" id="female" name="female" value="female">
+          <label for="female"> Género femenino</label><br>
+          <input type="checkbox" id="male" name="male" value="male">
+          <label for="male"> Género masculino</label><br>
+          <input type="checkbox" id="unknown" name="unknown" value="unknown">
+          <label for="unknown"> Género desconocido</label>
+        </aside>
+   
+          <div class="box" id="table">
+          </div>
+  
+    </section>
+</main>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
