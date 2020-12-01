@@ -1,4 +1,4 @@
-export default {
+ const data = {
   "info": {
       "count": 493,
       "pages": 25,
@@ -11163,3 +11163,4 @@ export default {
       }
   ]
 };
+export default data;
