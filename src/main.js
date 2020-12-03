@@ -4,13 +4,7 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, data);
 
-
-
-
 const table = document.getElementById("table");
-
-
-
 
 window.onload = function addAllCharacters() {
 const info = data.results;
@@ -25,26 +19,10 @@ image.setAttribute("class", "image");
 name.innerHTML = data.results[i].name;
 table.appendChild(tarjeta);
 tarjeta.appendChild(image);
-tarjeta.appendChild(name);
+tarjeta.appendChild(name);}
  }
- }
 
 
 
 
 
-
-
-
-
-
-// function addLi() {
-//     var contenido;
-//     for (i = 0; i < pelis.length; i++) {
-//       var li = document.createElement("li");
-//       var p = document.createElement("p");
-//       contenido = "Nombre:" + pelis[i].Nombre + " || Genero: " + pelis[i].Genero;
-//       p.appendChild(document.createTextNode(contenido));
-//       document.querySelector("#lista-pelis").appendChild(li).appendChild(p);
-//     }
-// }
