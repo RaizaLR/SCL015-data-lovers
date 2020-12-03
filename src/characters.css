@@ -83,6 +83,10 @@
       flex-wrap: wrap;
       flex-direction: row;
     }
+
+    .box{
+      overflow-y: scroll;
+    }
   
     .cell{
     color: #000000;
@@ -93,7 +97,7 @@
     display: flex;
     align-items: center;
     padding-left: 2%;
-    width: 49%;
+    width: 47.7%;
     height: 20%;
     background: rgba(196, 196, 196, 0.7);
     border: 1px solid #000000;
