@@ -5,33 +5,46 @@ import data from './data/rickandmorty/rickandmorty.js';
 console.log(example, data);
 
 
-////////////////////////////////aqui empieza funcion
+
 
 const table = document.getElementById("table");
 
+
+
+
+window.onload = function addAllCharacters() {
+const info = data.results;
+    for (let i=0; i < info.length; i++) {
 let tarjeta = document.createElement("DIV");
-
 let image = document.createElement("IMG");
-
-//se cree el elemento tarjeta dentro del elemento tabla
-table.appendChild(tarjeta);
-//
-tarjeta.setAttribute("class", "cell");
-
-tarjeta.setAttribute("id", "card");
-tarjeta.appendChild(image);
-image.setAttribute("class", "image");
 let name = document.createElement("P");
-
+tarjeta.setAttribute("class", "cell");
+tarjeta.setAttribute("id", "card");
+image.setAttribute("src", data.results[i].image);
+image.setAttribute("class", "image");
+name.innerHTML = data.results[i].name;
+table.appendChild(tarjeta);
+tarjeta.appendChild(image);
 tarjeta.appendChild(name);
+ }
+ }
 
-for(let i = 0;i < data.results.length; i++){
-if(window.onload === true){
 
-let imageReturn = image.setAttribute("src", data.results[i].image);
- 
-return imageReturn;}
 
-name.innerHTML = data.results[i].name;}
 
-console.log()
+
+
+
+
+
+
+// function addLi() {
+//     var contenido;
+//     for (i = 0; i < pelis.length; i++) {
+//       var li = document.createElement("li");
+//       var p = document.createElement("p");
+//       contenido = "Nombre:" + pelis[i].Nombre + " || Genero: " + pelis[i].Genero;
+//       p.appendChild(document.createTextNode(contenido));
+//       document.querySelector("#lista-pelis").appendChild(li).appendChild(p);
+//     }
+// }
