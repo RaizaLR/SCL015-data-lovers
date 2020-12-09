@@ -125,6 +125,6 @@ Para solucionar estos problemas aplicamos las siguientes modificaciones:
 * Modificamos el color de los botones y les añadimos profundidad.
 * Añadimos sombreado a las letras para que resaltaran.
 
-![prototipo-despues-de-feedback](/src/immg/prototipoDespuesDeFeedback.png)
+![prototipo-despues-de-feedback](/src/img/prototipoDespuesDeFeedback.png)
 
 ### Test de usabilidad con proyecto final:
