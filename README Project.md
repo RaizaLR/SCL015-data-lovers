@@ -93,10 +93,38 @@ para: conocer la serie
 * [ ] Maquetación de pagina (HTML y CSS)
 * [ ] Grid
 * [ ] Lograr diferenciar de la estructura estática y dinámica de los elementos
-* [ ] Responsiva
+* [ ] Aplicar diseño responsive
+
+### Segunda Historia:
+
+- Definición de la Historia:
+yo como: usuario
+quiero: poder ordenar alfabeticamente a los personajes
+para: poder ubicarlos rápidamente por su nombre
+
+- Criterios de Aceptación: 
+* [ ] Que haya una opción de select en la página donde esté la opción ordenar alfabeticamente de manera ascendente y descendente
+* [ ] Que una vez que el usuario seleccione la opcion ordenar alfabeticamente (de A-Z o de Z-A), los personajes cambien su posicion y se ordenen
+* [ ] Aplicar diseño responsive
 
 ## 5. Test de usabilidad
 
 ### Test usabilidad con prototipo de alta fidelidad:
+
+Realizamos a través de Figma nuestros primeros test de usabilidad. Esto lo pensamos con la finalidad de ahorrar horas de código al obtener feedback de nuestros usuarios de manera rápida y poder así iterar y efectuar las modificaciones necesarias antes de empezar con el código. 
+
+![prototipo-antes-de-feedback](/src/img/prototipoAntesDeFeedback.jpg)
+
+Los problemas que detectamos en estos tests de usabilidad fueron los siguientes:
+
+* El botón resultó confuso, ya que era muy similar al titulo. Nos pidieron que tuvieran profundidad y que fueran de otro color.
+* Las letras de ¿por dónde comenzamos? se perdían con la imagen de fondo.
+
+Para solucionar estos problemas aplicamos las siguientes modificaciones:
+
+* Modificamos el color de los botones y les añadimos profundidad.
+* Añadimos sombreado a las letras para que resaltaran.
+
+![prototipo-despues-de-feedback](/src/immg/prototipoDespuesDeFeedback.png)
 
 ### Test de usabilidad con proyecto final:
