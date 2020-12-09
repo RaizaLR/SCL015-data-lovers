@@ -21,8 +21,3 @@ table.appendChild(tarjeta);
 tarjeta.appendChild(image);
 tarjeta.appendChild(name);}
  }
-
-
-
-
-
