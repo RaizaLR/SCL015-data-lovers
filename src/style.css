@@ -51,7 +51,7 @@
 
   .button{
   text-decoration: none;
-  background: #00b7f8;
+  background: #02B1C8;
   border-bottom: 5px solid #0045a6;
   border-radius: 12px;
   box-shadow: 5px 5px 5px #999;
@@ -70,7 +70,7 @@
   margin-bottom: 5vw;}
 
   .button:hover{
-  background: #0096f7;}
+  background: #017dcf;}
 
   .button:active {
   box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #00b7f8;
