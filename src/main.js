@@ -6,8 +6,11 @@ console.log(example, data);
 
 const table = document.getElementById("table");
 
-window.onload = function addAllCharacters() {
-const info = data.results;
+
+window.addEventListener("load", addAllCharacters(data.results));
+
+function addAllCharacters(info) {
+  table.innerHTML = "";
     for (let i=0; i < info.length; i++) {
 let tarjeta = document.createElement("DIV");
 let image = document.createElement("IMG");
@@ -23,10 +26,10 @@ tarjeta.appendChild(name);}
  }
 
 let select = document.getElementById("select");
-select.addEventListener("change",order)
+select.addEventListener("change",order);
 function order(){
   if(select.value === "alphAscending"){
-    const info = data.results;
+    let info = data.results;
     for (let i=0; i < info.length; i++){
    
     info.sort(function (a, b) {
@@ -39,36 +42,40 @@ function order(){
        // a debe ser igual a b
        return 0;
     });   
-    console.log(info[i].name);  }
+    }
+    return addAllCharacters(info);
      }
     else if(select.value === "alphDescending"){
-        console.log("prueba");}
+      let info = data.results;
+      for (let i=0; i < info.length; i++){
+     
+      info.sort(function (a, b) {
+         if (a.name < b.name) {
+           return 1;
+         }
+         if (a.name > b.name) {
+           return -1;
+         }
+         // a debe ser igual a b
+         return 0;
+      });   
+      }
+      return addAllCharacters(info);
+       }
     else {
-      console.log("tercero");
+      let info = data.results;
+      for (let i=0; i < info.length; i++){
+     
+      info.sort(function (a, b) {
+         if (a.id > b.id) {
+           return 1;
+         }
+         if (a.id < b.id) {
+           return -1;
+         }
+         // a debe ser igual a b
+         return 0;
+      });   
+      }
+      return addAllCharacters(info);
     };  }
-
-
-
-//  const alphOrder = document.getElementById("select");
-// let optionA= document.getElementById("alphAscending");
-//   alphOrder.addEventListener('change',ordenAscendente);
-//   function ordenAscendente(){
-// if(select.selectedIndex=0) {console.log("holamundo")};
-// if(select.selectedIndex=1) {console.log("else")};
-// if(select.selectedIndex=2) {console.log("if")};
-//   }
-
-
-// elemento.addEventListener("focus", myScript);
-
-// function myScript(){
-//     console.log("hola");
-// }
-
-//  if (document.getElementById("alphAscending").select==true) { 
-//     console.log("ok");
-//   }
-
-
-//  alphAscending.addEventListener('selected', console.log("hola mundo"));
-

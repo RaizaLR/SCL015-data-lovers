@@ -11,20 +11,28 @@
   <body>
     <main class="flexcontainer">
     <section class="charactersSection" id="charactersSection">
+   
         <header class="header">
           <div class="selectOrder">
           <label for="order" class="select">Ordenar:</label>
-          <select name="order" id="select" class="selectOpptions">
+          <select name="order" id="select" class="selectOptions">
             <option value="select">Seleccionar</option>
             <option value="alphAscending" id="alphAscending">Alfabéticamente (A-Z)</option>
             <option value="alphDescending">Alfabéticamente (Z-A)</option>
           </select>
-        </div>
-          <h1 class="charactersTitle">Personajes</h1>
-          <div class="backButtons">
+          </div>
+          <div class="title">
+            <h1 class="charactersTitle">Personajes</h1>
+          </div>
+      <div class="right">
+        <div class="backButtons">
           <a href="index.html" class="Btn one" id="backBtn">Volver</a>
           <a href="" class="Btn one">Episodios</a>
         </div>
+        <form>
+          <input type="text" name="search" value="Buscar" class="search">
+        </form>
+      </div>
         </header>
   
         <div class="aside">
