@@ -211,8 +211,48 @@
    font-weight: 1000;
  }
 
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
     /* //responsive// */
-    @media screen and (max-width: 414px) {
+
+    @media only screen and (max-width: 768px) {
       .box{
         width: 80%;
         height: 70vh;
@@ -256,8 +296,108 @@
           border: 1px solid #000000;
           }
           .image{
-            width: 20vw;
-            height: 10vh;
+            width: 22%;
+            height: 75%;
+            margin-right: 2%;
+            margin-left: 2%;
+            border: 1px solid #000000;
+             }
+    
+    
+         .header{
+          display: flex;
+          justify-content: center;
+        }
+    
+        .select{
+          font-size: 2vh;
+        }
+        select{
+          font-size: 1.5vh;
+        }
+        select{ 
+          width: 30vw;
+          height: 3vh;
+          font-size: 2vh;
+        }
+    
+        .search{
+          width: 30vw;
+          background-position: 5%; 
+          background-size: 10%;
+          height: 3vh;
+          font-size: 2vh;
+        }
+        .Btn{
+          display: flex;
+          width: 20vw;
+          height: 2.5vh;
+          color: #000000;
+          font-size: 2vh;
+          padding: 1%;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+            }
+    
+            .backButtons{
+              display: flex;
+              flex-direction: column;
+              margin-top: 4vh;
+            }
+        .selectOrder{
+          margin-top: 7.7vh;
+        }
+    
+    
+     }
+
+    @media only screen and (max-width: 414px) {
+      .box{
+        width: 80%;
+        height: 70vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+      aside{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        }
+        .filters{
+          width: 30%;
+          color: #000000;
+          display: flex;
+          flex-direction: column;
+          font-size: 2vh;
+          justify-content: flex-start;
+          margin-left: 3.5%;
+        }
+        .charactersTitle{
+          display: flex;
+          font-size: 3vh;
+          margin-left: 2vw;
+          margin-right: 2vw;
+          align-items: center;
+        }
+        .cell{
+          color: #000000;
+          font-family: 'Roboto', sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 2.5vh;
+          display: flex;
+          align-items: center;
+          padding-left: 0.5%;
+          width: 95%;
+          height: 20%;
+          background: rgba(196, 196, 196, 0.7);
+          border: 1px solid #000000;
+          }
+          .image{
+            width: 30%;
+            height: 80%;
             margin-right: 2%;
             margin-left: 2%;
             border: 1px solid #000000;
@@ -310,3 +450,4 @@
         }
  }
   
+ 
