@@ -143,13 +143,13 @@ function order(){
 
 
 // Get the modal
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("card");
+let btn = document.getElementById("card");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -169,3 +169,34 @@ window.onclick = function(event) {
 }
 
 
+
+
+  // let species = document.querySelector("aside");
+  // species.addEventListener("click",myFunction);
+  //       function myFunction(event){
+  //         let x = event.target;
+
+  //         if(x.id === "alien"){
+  //           let info = data.results.filter(e => e.species == "Alien");
+  //             addAllCharacters(info);
+  //         } 
+  //         else if((x.id === "human")){
+  //           let info = data.results.filter(e => e.species == "Human");
+  //           addAllCharacters(info);
+  //         }
+  //         else if((x.id === "female")){
+  //           let info = data.results.filter(e => e.gender == "Female");
+  //           addAllCharacters(info);
+  //         }
+  //         else if((x.id === "male")){
+  //           let info = data.results.filter(e => e.gender == "Male");
+  //           addAllCharacters(info);
+  //         }
+  //         else if((x.id === "unknown")){
+  //           let info = data.results.filter(e => e.gender == "unknown");
+  //           addAllCharacters(info);
+  //         }
+  //         else{
+  //           let info = data.results; 
+  //           addAllCharacters(info);
+  //         }}

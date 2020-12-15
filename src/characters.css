@@ -228,11 +228,13 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #C4C4C4;
+  color: #000;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 50px;
 }
 
 /* The Close Button */
