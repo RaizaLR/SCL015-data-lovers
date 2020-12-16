@@ -80,65 +80,60 @@ function order(){
       return addAllCharacters(info);
     };  }
 
-  const alienChckBx = document.getElementById("alien");
-  alienChckBx.addEventListener("click",alienFilter);
+const alienChckBx = document.getElementById("alien");
+alienChckBx.addEventListener("click",filter);
+const humanChckBx = document.getElementById("human");
+humanChckBx.addEventListener("click",filter);
+const femaleChckBx = document.getElementById("female");
+femaleChckBx.addEventListener("click",filter);
+const maleChckBx = document.getElementById("male");
+maleChckBx.addEventListener("click",filter);
+const unknownGenderChckBx = document.getElementById("unknown");
+unknownGenderChckBx.addEventListener("click",filter);
 
-    function alienFilter(){
-      if (alienChckBx.checked===true) {
-        let info = data.results.filter(e => e.species === "Alien");
-        addAllCharacters(info);
-         }
-         else {
-          let info = data.results; 
-          addAllCharacters(info)};}
-    
-  const humanChckBx = document.getElementById("human");
-  humanChckBx.addEventListener("click",humanFilter);
+    function filter(){
 
-    function humanFilter(){
-      if (humanChckBx.checked===true) {
-        let info = data.results.filter(e => e.species === "Human");
-        addAllCharacters(info);
-          }
-          else {
-          let info = data.results; 
-          addAllCharacters(info)};}
+if ((alienChckBx.checked===true)&&(humanChckBx.checked===true)) {
+let info = data.results.filter(e => e.species==="Alien");
+let info2 = info.filter(e => e.species==="Human");
+addAllCharacters(info2); }
 
-  const femaleChckBx = document.getElementById("female");
- femaleChckBx.addEventListener("click",femaleFilter);
+// if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
+// let info = data.results.filter(e => e.species === "Alien");
+// let info2 = info.filter(e => e.gender === "Female");
+// addAllCharacters(info2); }
 
-    function femaleFilter(){
-      if (femaleChckBx.checked===true) {
-        let info = data.results.filter(e => e.gender === "Female");
-        addAllCharacters(info);
-          }
-          else {
-          let info = data.results; 
-          addAllCharacters(info)};}
+// if ((maleChckBx.checked===true)&&(AlienChckBx.checked===true)) {
+//   let info = data.results.filter(e => e.species === "Alien");
+//   let info2 = info.filter(e => e.gender === "Male");
+//   addAllCharacters(info2); }
 
-  const maleChckBx = document.getElementById("male");
-  maleChckBx.addEventListener("click",maleFilter);
-  
-      function maleFilter(){
-        if (maleChckBx.checked===true) {
-          let info = data.results.filter(e => e.gender === "Male");
-          addAllCharacters(info);
-            }
-            else {
-            let info = data.results; 
-            addAllCharacters(info)};}
+else if (alienChckBx.checked===true) {
+let info = data.results.filter(e => e.species === "Alien");
+addAllCharacters(info);}
 
-  const unknownGenderChckBx = document.getElementById("unknown");
-  unknownGenderChckBx.addEventListener("click",unknownGenderFilter);
-  
-      function unknownGenderFilter(){
-        if (unknownGenderChckBx.checked===true) {
-          let info = data.results.filter(e => e.gender === "unknown");
-          addAllCharacters(info);
-            }
-            else {
-            let info = data.results; 
-            addAllCharacters(info)};}
+else if (humanChckBx.checked===true) {
+let info = data.results.filter(e => e.species === "Human");
+addAllCharacters(info);}
+
+else if (femaleChckBx.checked===true) {
+let info = data.results.filter(e => e.gender === "Female");
+addAllCharacters(info);}
+
+else if (maleChckBx.checked===true) {
+let info = data.results.filter(e => e.gender === "Male");
+addAllCharacters(info);}
+
+else if (unknownGenderChckBx.checked===true) {
+let info = data.results.filter(e => e.gender === "unknown");
+addAllCharacters(info);}
+
+else {
+let info = data.results; 
+addAllCharacters(info)} }
+
+
+//modal//
           
 let modalName = document.getElementById("modalName");
 let modalImage = document.getElementById("modalImage");
