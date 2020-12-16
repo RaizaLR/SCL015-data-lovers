@@ -140,21 +140,27 @@ function order(){
             let info = data.results; 
             addAllCharacters(info)};}
           
-
+let modalName = document.getElementById("modalName");
+let modalImage = document.getElementById("modalImage");
 
 // Get the modal
 let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-let btn = document.getElementById("card");
+let btn = document.querySelector(".box");
+console.log(btn);
 
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+
+btn.onclick = function(event) {
+  let x = event.target;
   modal.style.display = "block";
-}
+  modalImage.setAttribute("src", x.src);
+  modalName.innerHTML = x.innerHTML;}
+  
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
