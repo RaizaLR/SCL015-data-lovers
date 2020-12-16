@@ -98,15 +98,41 @@ let info = data.results.filter(e => e.species==="Alien");
 let info2 = info.filter(e => e.species==="Human");
 addAllCharacters(info2); }
 
-// if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-// let info = data.results.filter(e => e.species === "Alien");
-// let info2 = info.filter(e => e.gender === "Female");
-// addAllCharacters(info2); }
+else if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
+let info = data.results.filter(e => e.species === "Alien");
+let info2 = info.filter(e => e.gender === "Female");
+addAllCharacters(info2); }
 
-// if ((maleChckBx.checked===true)&&(AlienChckBx.checked===true)) {
-//   let info = data.results.filter(e => e.species === "Alien");
-//   let info2 = info.filter(e => e.gender === "Male");
-//   addAllCharacters(info2); }
+else if ((alienChckBx.checked===true)&&(maleChckBx.checked===true)) {
+  let info = data.results.filter(e => e.species === "Alien");
+  let info2 = info.filter(e => e.gender === "Male");
+  addAllCharacters(info2); }
+
+else if ((alienChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+  let info = data.results.filter(e => e.species === "Alien");
+  let info2 = info.filter(e => e.gender === "unknown");
+  addAllCharacters(info2); }
+
+else if ((humanChckBx.checked===true)&&(femaleChckBx.checked===true)) {
+    let info = data.results.filter(e => e.species === "Human");
+    let info2 = info.filter(e => e.gender === "Female");
+    addAllCharacters(info2); }
+  
+else if ((humanChckBx.checked===true)&&(maleChckBx.checked===true)) {
+    let info = data.results.filter(e => e.species === "Human");
+    let info2 = info.filter(e => e.gender === "Male");
+    addAllCharacters(info2); }
+ 
+else if ((humanChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+    let info = data.results.filter(e => e.species === "Human");
+    let info2 = info.filter(e => e.gender === "unknown");
+    addAllCharacters(info2); }
+
+else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+let info = data.results.filter(e => e.gender === "Female");
+let info2 = info.filter(e => e.gender === "Male");
+let info3 = info2.filter(e => e.gender === "Unknown");
+addAllCharacters(info3); }   
 
 else if (alienChckBx.checked===true) {
 let info = data.results.filter(e => e.species === "Alien");
