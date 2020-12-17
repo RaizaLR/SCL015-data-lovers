@@ -78,7 +78,7 @@ function order(){
       });   
       }
       return addAllCharacters(info);
-    };  }
+    }  }
 
 const alienChckBx = document.getElementById("alien");
 alienChckBx.addEventListener("click",filter);
