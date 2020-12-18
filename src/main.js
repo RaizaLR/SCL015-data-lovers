@@ -66,25 +66,25 @@ function filterInfo(){
     let filterArray = functions.alienMaleFilter(info)
       addAllCharacters(filterArray);}
     else if ((alienChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.alienUnkFilter(info)
+      let filterArray = functions.alienUnkFilter(info);
       addAllCharacters(filterArray);}
     else if ((humanChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-      let filterArray = functions.humanFemaleFilter(info)
+      let filterArray = functions.humanFemaleFilter(info);
       addAllCharacters(filterArray);}
     else if ((humanChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = functions.humanMaleFilter(info)
+      let filterArray = functions.humanMaleFilter(info);
       addAllCharacters(filterArray);}
     else if ((humanChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.humanUnkFilter(info)
+      let filterArray = functions.humanUnkFilter(info);
       addAllCharacters(filterArray); }
     else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = functions.femaleMaleFilter(info)
+      let filterArray = functions.femaleMaleFilter(info);
       addAllCharacters(filterArray); }   
     else if ((femaleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.femaleUknFilter(info)
+      let filterArray = functions.femaleUnkFilter(info);
       addAllCharacters(filterArray); } 
     else if ((maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.maleUnkFilter(info)
+      let filterArray = functions.maleUnkFilter(info);
       addAllCharacters(filterArray); } 
     else if ((unknownGenderChckBx.checked===true)&&(femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
       let filterArray = functions.threeGenderFilter(info)
