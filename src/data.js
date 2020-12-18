@@ -114,13 +114,4 @@ const functions = {
       },
     }
 
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
-// let nombres = {
-
-// }
-// console.log([name:0]);
-
 export default functions;
