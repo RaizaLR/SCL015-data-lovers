@@ -3,19 +3,44 @@ import  functions  from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 
+let info = data.results;
+
+let table = document.getElementById("table");
 
 
+window.addEventListener("load", addAllCharacters(data.results));
+function  addAllCharacters(info) {
+    table.innerHTML = "";
+    for (let i=0; i < info.length; i++) {
+let tarjeta = document.createElement("DIV");
+let image = document.createElement("IMG");
+let name = document.createElement("P");
+tarjeta.setAttribute("class", "cell");
+tarjeta.setAttribute("id", "card");
+image.setAttribute("src", info[i].image);
+image.setAttribute("class", "image");
+name.innerHTML = info[i].name;
+table.appendChild(tarjeta);
+tarjeta.appendChild(image);
+tarjeta.appendChild(name);}
+ } 
 
-window.addEventListener("load", function(){
-  let info = data.results;
-  functions.addAllCharacters(info);
-});
 
 let select = document.getElementById("select");
 select.addEventListener("change",function(){
-  let info = data.results;
-functions.order(info);
- });
+  
+  if(select.value === "alphAscending"){
+    table.innerHTML = "";
+    let array = functions.orderAZ(info);
+  return addAllCharacters(array); }
+
+  else if(select.value === "alphDescending"){
+    let array = functions.orderZA(info);
+    return addAllCharacters(array);}
+
+  else{
+    let array = functions.orderDefault(info);
+    return addAllCharacters(array)}});
 
 
 const alienChckBx = document.getElementById("alien");

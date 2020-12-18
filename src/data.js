@@ -1,8 +1,7 @@
 // estas funciones son de ejemplo
-const table = document.getElementById("table");
 
 
-let select = document.getElementById("select");
+
 const alienChckBx = document.getElementById("alien");
 const humanChckBx = document.getElementById("human");
 const femaleChckBx = document.getElementById("female");
@@ -10,25 +9,10 @@ const maleChckBx = document.getElementById("male");
 const unknownGenderChckBx = document.getElementById("unknown");
 
 const functions = {
-  addAllCharacters(info) {
-    table.innerHTML = "";
-    for (let i=0; i < info.length; i++) {
-let tarjeta = document.createElement("DIV");
-let image = document.createElement("IMG");
-let name = document.createElement("P");
-tarjeta.setAttribute("class", "cell");
-tarjeta.setAttribute("id", "card");
-image.setAttribute("src", info[i].image);
-image.setAttribute("class", "image");
-name.innerHTML = info[i].name;
-table.appendChild(tarjeta);
-tarjeta.appendChild(image);
-tarjeta.appendChild(name);}
- } 
-  ,
- order(info) {
-    if(select.value === "alphAscending"){
-      info.sort(function (a, b) {
+  
+ orderAZ(info) {
+
+  let orderedInfo = info.sort(function (a, b) {
          if (a.name > b.name) {
            return 1;
          }
@@ -38,11 +22,10 @@ tarjeta.appendChild(name);}
          // a debe ser igual a b
          return 0;
       });  
-      return functions.addAllCharacters(info);
-       }
-       
-      else if(select.value === "alphDescending"){
-        info.sort(function (a, b) {
+     return orderedInfo;
+      },
+  orderZA(info) {
+  let  orderedInfo = info.sort(function (a, b) {
            if (a.name < b.name) {
              return 1;
            }
@@ -52,11 +35,11 @@ tarjeta.appendChild(name);}
            // a debe ser igual a b
            return 0;
         });   
-        return functions.addAllCharacters(info);
-         }
+        return orderedInfo;
+         },
 
-      else {
-        info.sort(function (a, b) {
+  orderDefault(info) {
+  let orderedInfo = info.sort(function (a, b) {
            if (a.id > b.id) {
              return 1;
            }
@@ -66,8 +49,8 @@ tarjeta.appendChild(name);}
            // a debe ser igual a b
            return 0;
         });   
-        return functions.addAllCharacters(info);
-      }  }
+        return orderedInfo;
+      } 
       ,
        filter(info){
         let aliensArray = info.filter(e => e.species==="Alien");
@@ -107,7 +90,7 @@ tarjeta.appendChild(name);}
         functions.addAllCharacters(femaleUnkArray); } 
         else if ((maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
         functions.addAllCharacters(maleUnkArray); } 
-        else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+        else if ((unknownGenderChckBx.checked===true)&&(femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
         functions.addAllCharacters(threeGendersArray); }   
         else if (alienChckBx.checked===true) {
         functions.addAllCharacters(aliensArray);}
