@@ -44,8 +44,9 @@ const functions = {
       ,
       alienFilter(info){
         let aliensArray = info.filter(e => e.species==="Alien");
-        return aliensArray;},
-      humanFlter(info){
+        return aliensArray;}
+        ,
+      humanFilter(info){
         let humansArray = info.filter(e => e.species==="Human");
         return humansArray;},
       femaleFilter(info){
