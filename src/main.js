@@ -56,38 +56,38 @@ unknownGenderChckBx.addEventListener("click",filterInfo)
 
 function filterInfo(){
   if ((alienChckBx.checked===true)&&(humanChckBx.checked===true)) {
-    let filterArray = funtions.alienHumanFilter(info)
+    let filterArray = functions.alienHumanFilter(info)
     addAllCharacters(filterArray);
   }
   else if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-    let filterArray = funtions.alienFemaleFilter(info)
+    let filterArray = functions.alienFemaleFilter(info)
     addAllCharacters(filterArray);}
     else if ((alienChckBx.checked===true)&&(maleChckBx.checked===true)) { 
-    let filterArray = funtions.alienMaleFilter(info)
+    let filterArray = functions.alienMaleFilter(info)
       addAllCharacters(filterArray);}
     else if ((alienChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = funtions.alienUnkFilter(info)
+      let filterArray = functions.alienUnkFilter(info)
       addAllCharacters(filterArray);}
     else if ((humanChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-      let filterArray = funtions.humanFemaleFilter(info)
+      let filterArray = functions.humanFemaleFilter(info)
       addAllCharacters(filterArray);}
     else if ((humanChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = funtions.humanMaleFilter(info)
+      let filterArray = functions.humanMaleFilter(info)
       addAllCharacters(filterArray);}
     else if ((humanChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = funtions.humanUnkFilter(info)
+      let filterArray = functions.humanUnkFilter(info)
       addAllCharacters(filterArray); }
     else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = funtions.femaleMaleFilter(info)
+      let filterArray = functions.femaleMaleFilter(info)
       addAllCharacters(filterArray); }   
     else if ((femaleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = funtions.femaleUknFilter(info)
+      let filterArray = functions.femaleUknFilter(info)
       addAllCharacters(filterArray); } 
     else if ((maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = funtions.maleUnkFilter(info)
+      let filterArray = functions.maleUnkFilter(info)
       addAllCharacters(filterArray); } 
     else if ((unknownGenderChckBx.checked===true)&&(femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = funtions.threeGenderFilter(info)
+      let filterArray = functions.threeGenderFilter(info)
       addAllCharacters(filterArray); }   
     else if (alienChckBx.checked===true) {
       let filterArray = functions.alienFilter(info);
