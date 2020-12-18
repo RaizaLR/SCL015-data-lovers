@@ -42,33 +42,71 @@ select.addEventListener("change",function(){
     let array = functions.orderDefault(info);
     return addAllCharacters(array)}});
 
-
 const alienChckBx = document.getElementById("alien");
-alienChckBx.addEventListener("click",function(){
-let info = data.results;
-functions.filter(info);
-});
 const humanChckBx = document.getElementById("human");
-humanChckBx.addEventListener("click",function(){
-  let info = data.results;
-  functions.filter(info);
-  });
 const femaleChckBx = document.getElementById("female");
-femaleChckBx.addEventListener("click",function(){
-  let info = data.results;
-  functions.filter(info);
-  });
 const maleChckBx = document.getElementById("male");
-maleChckBx.addEventListener("click",function(){
-  let info = data.results;
-  functions.filter(info);
-  });
 const unknownGenderChckBx = document.getElementById("unknown");
-unknownGenderChckBx.addEventListener("click",function(){
-  let info = data.results;
-  functions.filter(info);
-  });
+    
+alienChckBx.addEventListener("click",filterInfo)
+humanChckBx.addEventListener("click",filterInfo)
+femaleChckBx.addEventListener("click",filterInfo)
+maleChckBx.addEventListener("click",filterInfo)
+unknownGenderChckBx.addEventListener("click",filterInfo)
 
+function filterInfo(){
+  if ((alienChckBx.checked===true)&&(humanChckBx.checked===true)) {
+    let filterArray = funtions.alienHumanFilter(info)
+    addAllCharacters(filterArray);
+  }
+  else if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
+    let filterArray = funtions.alienFemaleFilter(info)
+    addAllCharacters(filterArray);}
+    else if ((alienChckBx.checked===true)&&(maleChckBx.checked===true)) { 
+    let filterArray = funtions.alienMaleFilter(info)
+      addAllCharacters(filterArray);}
+    else if ((alienChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+      let filterArray = funtions.alienUnkFilter(info)
+      addAllCharacters(filterArray);}
+    else if ((humanChckBx.checked===true)&&(femaleChckBx.checked===true)) {
+      let filterArray = funtions.humanFemaleFilter(info)
+      addAllCharacters(filterArray);}
+    else if ((humanChckBx.checked===true)&&(maleChckBx.checked===true)) {
+      let filterArray = funtions.humanMaleFilter(info)
+      addAllCharacters(filterArray);}
+    else if ((humanChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+      let filterArray = funtions.humanUnkFilter(info)
+      addAllCharacters(filterArray); }
+    else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
+      let filterArray = funtions.femaleMaleFilter(info)
+      addAllCharacters(filterArray); }   
+    else if ((femaleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+      let filterArray = funtions.femaleUknFilter(info)
+      addAllCharacters(filterArray); } 
+    else if ((maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+      let filterArray = funtions.maleUnkFilter(info)
+      addAllCharacters(filterArray); } 
+    else if ((unknownGenderChckBx.checked===true)&&(femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
+      let filterArray = funtions.threeGenderFilter(info)
+      addAllCharacters(filterArray); }   
+    else if (alienChckBx.checked===true) {
+      let filterArray = functions.alienFilter(info);
+      addAllCharacters(filterArray);}
+    else if (humanChckBx.checked===true) {
+      let filterArray = functions.humanFilter(info);
+      addAllCharacters(filterArray);}
+    else if (femaleChckBx.checked===true) {
+      let filterArray = functions.femaleFilter(info);
+      addAllCharacters(filterArray);}
+    else if (maleChckBx.checked===true) {
+      let filterArray = functions.maleFilter(info);
+      addAllCharacters(filterArray);}
+    else if (unknownGenderChckBx.checked===true) {
+      let filterArray = functions.unkFilter(info);
+      addAllCharacters(filterArray);}
+    else {
+    addAllCharacters(info)}
+}
     
 //modal//
           
