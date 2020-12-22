@@ -22,7 +22,10 @@ image.setAttribute("class", "image");
 name.innerHTML = info[i].name;
 table.appendChild(tarjeta);
 tarjeta.appendChild(image);
-tarjeta.appendChild(name);}
+tarjeta.appendChild(name);
+ //aqui le decimos a la tarjeta que cuando oiga click ejecute la funcion que muestra el modal
+tarjeta.onclick= function() {
+addModal(info[i]);}}
  } 
 
 
@@ -50,6 +53,7 @@ const humanChckBx = document.getElementById("human");
 const femaleChckBx = document.getElementById("female");
 const maleChckBx = document.getElementById("male");
 const unknownGenderChckBx = document.getElementById("unknown");
+
     
 alienChckBx.addEventListener("click",filterInfo);
 humanChckBx.addEventListener("click",filterInfo);
@@ -57,70 +61,77 @@ femaleChckBx.addEventListener("click",filterInfo);
 maleChckBx.addEventListener("click",filterInfo);
 unknownGenderChckBx.addEventListener("click",filterInfo);
 
+//añadir false para otras oopcinoes de checkeo//
 function filterInfo(){
-  if ((alienChckBx.checked===true)&&(humanChckBx.checked===true)) {
-    let filterArray = functions.alienHumanFilter(info);
-    info=filterArray;
-    addAllCharacters(info);
-  }
-  else if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-    let filterArray = functions.alienFemaleFilter(info);
-    info=filterArray;
-    addAllCharacters(info);}
-    else if ((alienChckBx.checked===true)&&(maleChckBx.checked===true)) { 
-    let filterArray = functions.alienMaleFilter(info);
-    info=filterArray;
-      addAllCharacters(info);}
-    else if ((alienChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.alienUnkFilter(info);
-      info=filterArray;
-      addAllCharacters(info);}
-    else if ((humanChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-      let filterArray = functions.humanFemaleFilter(info);
-      info=filterArray;
-      addAllCharacters(info);}
-    else if ((humanChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = functions.humanMaleFilter(info);
-      info=filterArray;
-      addAllCharacters(info);}
-    else if ((humanChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.humanUnkFilter(info);
-      info=filterArray;
-      addAllCharacters(info); }
-    else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = functions.femaleMaleFilter(info);
-      info=filterArray;
-      addAllCharacters(info); }   
-    else if ((femaleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.femaleUnkFilter(info);
-      info=filterArray;
-      addAllCharacters(info); } 
-    else if ((maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-      let filterArray = functions.maleUnkFilter(info);
-      info=filterArray;
-      addAllCharacters(info); } 
-    else if ((unknownGenderChckBx.checked===true)&&(femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
-      let filterArray = functions.threeGenderFilter(info);
-      info=filterArray;
-      addAllCharacters(info); }   
-    else if (alienChckBx.checked===true) {
-      let filterArray = functions.alienFilter(info);
-      info=filterArray;
-      addAllCharacters(info);}
-    else if (humanChckBx.checked===true) {
-      let filterArray = functions.humanFilter(info);
-      info=filterArray;
-      addAllCharacters(info);}
-    else if (femaleChckBx.checked===true) {
-      let filterArray = functions.femaleFilter(info);
+  // if ((alienChckBx.checked===true)&&(humanChckBx.checked===true)) {
+  //   let filterArray = functions.speciesFilter(info,"Alien") && functions.speciesFilter(info,"Human");
+  //   info=filterArray;
+  //   addAllCharacters(info);
+  // }
+  // else if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
+  //   let filterArray = functions.speciesFilter(info,"Alien") && functions.genderFilter(info,"Female");
+  //   info=filterArray;
+  //   addAllCharacters(info);}
+  //   else if ((alienChckBx.checked===true)&&(maleChckBx.checked===true)) { 
+  //   let filterArray = functions.speciesFilter(info, "Alien") && functions.genderFilter(info, "Male");
+  //   info=filterArray;
+  //     addAllCharacters(info);}
+  //   else if ((alienChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+  //     let filterArray = functions.speciesFilter(info,"Alien") && functions.genderFilter(info,"unknown");
+  //     info=filterArray;
+  //     addAllCharacters(info);}
+  //   else if ((humanChckBx.checked===true)&&(femaleChckBx.checked===true)) {
+  //     let filterArray = functions.speciesFilter(info, "Human") && functions.genderFilter(info,"Female");
+  //     info=filterArray;
+  //     addAllCharacters(info);}
+  //   else if ((humanChckBx.checked===true)&&(maleChckBx.checked===true)) {
+  //     let filterArray = functions.speciesFilter(info,"Human") && functions.genderFilter(info,"Male")
+  //     info=filterArray;
+  //     addAllCharacters(info);}
+  //   else if ((humanChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+  //     let filterArray = functions.speciesFilter(info,"Human") && functions.genderFilter(info,"unknown")
+  //     info=filterArray;
+  //     addAllCharacters(info); }
+  //   else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
+  //     let filterArray = functions.genderFilter(info,"Female") && functions.genderFilter(info,"Male");
+  //     info=filterArray;
+  //     addAllCharacters(info); }   
+  //   else if ((femaleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+  //     let filterArray = functions.genderFilter(info,"Female") && functions.genderFilter(info,"unknown");
+  //     info=filterArray;
+  //     addAllCharacters(info); } 
+  //   else if ((maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
+  //     let filterArray = functions.genderFilter(info,"Male") && functions.genderFilter(info,"unknown");
+  //     info=filterArray;
+  //     addAllCharacters(info); } 
+  //   else if ((unknownGenderChckBx.checked===true)&&(femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
+  //     let filterArray = functions.genderFilter(info,"unknown") && functions.genderFilter(info,"Female") && functions.genderFilter(info,"Male");
+  //     info=filterArray;
+  //     addAllCharacters(info); }   
+    
+     if (femaleChckBx.checked===true) {
+      let gender = "Female";
+      let filterArray = functions.genderFilter(info, gender);
       info=filterArray;
       addAllCharacters(info);}
     else if (maleChckBx.checked===true) {
-      let filterArray = functions.maleFilter(info);
+      let gender = "Male";
+      let filterArray = functions.genderFilter(info, gender);
       info=filterArray;
       addAllCharacters(info);}
     else if (unknownGenderChckBx.checked===true) {
-      let filterArray = functions.unkFilter(info);
+      let gender = "unknown"
+      let filterArray = functions.genderFilter(info, gender);
+      info=filterArray;
+      addAllCharacters(info);}
+    else if (alienChckBx.checked===true) {
+      let species = "Alien";
+      let filterArray = functions.speciesFilter(info,species);
+      info=filterArray;
+      addAllCharacters(info);}
+    else if (humanChckBx.checked===true) {
+      let species = "Human";
+      let filterArray = functions.speciesFilter(info, species);
       info=filterArray;
       addAllCharacters(info);}
     else {
@@ -129,35 +140,38 @@ function filterInfo(){
 }
     
 //modal//
-          
-let modalName = document.getElementById("modalName");
-let modalImage = document.getElementById("modalImage");
-
-// Get the modal
+// Seleccionamos el modal
 let modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-let btn = document.querySelector(".box");
-
-
-// Get the <span> element that closes the modal
+// Seleccionamos el elemento <span> que cierra el modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+//Funcion para añadir el contenido del modal
 
-btn.onclick = function(event) {
-  let x = event.target;
-  modal.style.display = "block";
-  modalImage.setAttribute("src", x.src);
-  modalName.innerHTML = x.innerHTML;}
-  
-
-// When the user clicks on <span> (x), close the modal
+   function addModal(info) {
+    modal.style.display = "block"
+    let imagen = document.getElementById("modalImage")
+    let name = document.getElementById("modalName")
+    let state = document.getElementById("modalStatus")
+    let specie = document.getElementById("modalSpecie")
+    let gender = document.getElementById("modalGender")
+    imagen.setAttribute("src",info.image)
+    name.setAttribute("class","modalName");
+    state.setAttribute("class","modalStatus");
+    specie.setAttribute("class","modalSpecie");
+    gender.setAttribute("class","modalGender");
+    name.innerHTML =`${info.name}`;
+    state.innerHTML = `Estado ${info.status}`;
+    specie.innerHTML = `Especie ${info.species}`;
+    gender.innerHTML = `Genero ${info.gender}`;
+    }
+    
+// Cuando el usuario hace click en <span> (x), se cierra el modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// Cuando el usuario hace click en cualquier lugar afuera del modal, se cierra
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -165,34 +179,3 @@ window.onclick = function(event) {
 }
 
 
-
-
-  // let species = document.querySelector("aside");
-  // species.addEventListener("click",myFunction);
-  //       function myFunction(event){
-  //         let x = event.target;
-
-  //         if(x.id === "alien"){
-  //           let info = data.results.filter(e => e.species == "Alien");
-  //             addAllCharacters(info);
-  //         } 
-  //         else if((x.id === "human")){
-  //           let info = data.results.filter(e => e.species == "Human");
-  //           addAllCharacters(info);
-  //         }
-  //         else if((x.id === "female")){
-  //           let info = data.results.filter(e => e.gender == "Female");
-  //           addAllCharacters(info);
-  //         }
-  //         else if((x.id === "male")){
-  //           let info = data.results.filter(e => e.gender == "Male");
-  //           addAllCharacters(info);
-  //         }
-  //         else if((x.id === "unknown")){
-  //           let info = data.results.filter(e => e.gender == "unknown");
-  //           addAllCharacters(info);
-  //         }
-  //         else{
-  //           let info = data.results; 
-  //           addAllCharacters(info);
-  //         }}

@@ -36,24 +36,26 @@
         </header>
 
         <div class = "centercontent">
-        <div class="aside">
-        <aside class="filters">
-          <h2 class="filtersTitle">Filtrar:</h2> <br>
-          <input type="checkbox" id="alien" name="species" value="alien" class="checkbox">
-          <label for="alien"> Alien</label><br>
-          <input type="checkbox" id="human" name="species" value="human" class="checkbox">
-          <label for="human"> Humano</label><br>
-          <input type="checkbox" id="female" name="gender" value="female" class="checkbox">
-          <label for="female"> Género femenino</label><br>
-          <input type="checkbox" id="male" name="gender" value="male" class="checkbox">
-          <label for="male"> Género masculino</label><br>
-          <input type="checkbox" id="unknown" name="gender" value="unknown" class="checkbox">
-          <label for="unknown"> Género desconocido</label>
-        </aside>
-         </div>
-          <div class="box" id="table">
+          <div class="aside">
+          <aside class="filters">
+            <h2 class="filtersTitle">Filtrar:</h2> <br>
+            <p><strong>&nbsp;&nbsp;Especie</strong></p><br>
+            <input type="checkbox" id="alien" name="species" value="alien" class="checkbox">
+            <label for="alien"> Alien</label><br>
+            <input type="checkbox" id="human" name="species" value="human" class="checkbox">
+            <label for="human"> Humano</label><br>
+            <p><strong>&nbsp;&nbsp;Género</strong></p><br>
+            <input type="checkbox" id="female" name="gender" value="female" class="checkbox">
+            <label for="female"> Género femenino</label><br>
+            <input type="checkbox" id="male" name="gender" value="male" class="checkbox">
+            <label for="male"> Género masculino</label><br>
+            <input type="checkbox" id="unknown" name="gender" value="unknown" class="checkbox">
+            <label for="unknown"> Género desconocido</label>
+          </aside>
+           </div>
+            <div class="box" id="table">
+            </div>
           </div>
-        </div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -61,6 +63,11 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
+    <img id="modalImage">
+    <p id="modalName"></p>
+    <p id="modalStatus"></p>
+    <p id="modalSpecie"></p>
+    <p id="modalGender"></p>
   </div>
 
 </div>
