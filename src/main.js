@@ -60,54 +60,7 @@ humanChckBx.addEventListener("click",humanFilterInfo);
 femaleChckBx.addEventListener("click",femaleFilterInfo);
 maleChckBx.addEventListener("click",maleFilterInfo);
 unknownGenderChckBx.addEventListener("click",unknownFilterInfo);
-
-//añadir false para otras oopcinoes de checkeo//
-
-  // if ((alienChckBx.checked===true)&&(humanChckBx.checked===true)) {
-  //   let filterArray = functions.speciesFilter(info,"Alien") && functions.speciesFilter(info,"Human");
-  //   info=filterArray;
-  //   addAllCharacters(info);
-  // }
-  // else if ((alienChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-  //   let filterArray = functions.speciesFilter(info,"Alien") && functions.genderFilter(info,"Female");
-  //   info=filterArray;
-  //   addAllCharacters(info);}
-  //   else if ((alienChckBx.checked===true)&&(maleChckBx.checked===true)) { 
-  //   let filterArray = functions.speciesFilter(info, "Alien") && functions.genderFilter(info, "Male");
-  //   info=filterArray;
-  //     addAllCharacters(info);}
-  //   else if ((alienChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-  //     let filterArray = functions.speciesFilter(info,"Alien") && functions.genderFilter(info,"unknown");
-  //     info=filterArray;
-  //     addAllCharacters(info);}
-  //   else if ((humanChckBx.checked===true)&&(femaleChckBx.checked===true)) {
-  //     let filterArray = functions.speciesFilter(info, "Human") && functions.genderFilter(info,"Female");
-  //     info=filterArray;
-  //     addAllCharacters(info);}
-  //   else if ((humanChckBx.checked===true)&&(maleChckBx.checked===true)) {
-  //     let filterArray = functions.speciesFilter(info,"Human") && functions.genderFilter(info,"Male")
-  //     info=filterArray;
-  //     addAllCharacters(info);}
-  //   else if ((humanChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-  //     let filterArray = functions.speciesFilter(info,"Human") && functions.genderFilter(info,"unknown")
-  //     info=filterArray;
-  //     addAllCharacters(info); }
-  //   else if ((femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
-  //     let filterArray = functions.genderFilter(info,"Female") && functions.genderFilter(info,"Male");
-  //     info=filterArray;
-  //     addAllCharacters(info); }   
-  //   else if ((femaleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-  //     let filterArray = functions.genderFilter(info,"Female") && functions.genderFilter(info,"unknown");
-  //     info=filterArray;
-  //     addAllCharacters(info); } 
-  //   else if ((maleChckBx.checked===true)&&(unknownGenderChckBx.checked===true)) {
-  //     let filterArray = functions.genderFilter(info,"Male") && functions.genderFilter(info,"unknown");
-  //     info=filterArray;
-  //     addAllCharacters(info); } 
-  //   else if ((unknownGenderChckBx.checked===true)&&(femaleChckBx.checked===true)&&(maleChckBx.checked===true)) {
-  //     let filterArray = functions.genderFilter(info,"unknown") && functions.genderFilter(info,"Female") && functions.genderFilter(info,"Male");
-  //     info=filterArray;
-  //     addAllCharacters(info); }   
+ 
   function femaleFilterInfo(){
      if (femaleChckBx.checked===true) {
       let gender = "Female";
@@ -170,21 +123,23 @@ let span = document.getElementsByClassName("close")[0];
 //Funcion para añadir el contenido del modal
 
    function addModal(info) {
-    modal.style.display = "block"
-    let imagen = document.getElementById("modalImage")
-    let name = document.getElementById("modalName")
-    let state = document.getElementById("modalStatus")
-    let specie = document.getElementById("modalSpecie")
-    let gender = document.getElementById("modalGender")
-    imagen.setAttribute("src",info.image)
+    modal.style.display = "block";
+    let imagen = document.getElementById("modalImage");
+    let name = document.getElementById("modalName");
+    let state = document.getElementById("modalStatus");
+    let specie = document.getElementById("modalSpecie");
+    let gender = document.getElementById("modalGender");
+    let location = document.getElementById("modalLocation");
+    imagen.setAttribute("src",info.image);
     name.setAttribute("class","modalName");
     state.setAttribute("class","modalStatus");
     specie.setAttribute("class","modalSpecie");
     gender.setAttribute("class","modalGender");
-    name.innerHTML =`${info.name}`;
-    state.innerHTML = `Estado ${info.status}`;
-    specie.innerHTML = `Especie ${info.species}`;
-    gender.innerHTML = `Genero ${info.gender}`;
+    name.innerHTML =`<strong>${info.name}</strong>`;
+    state.innerHTML = `Estado: ${info.status}`;
+    specie.innerHTML = `Especie: ${info.species}`;
+    gender.innerHTML = `Género: ${info.gender}`;
+    location.innerHTML = `Ubicación: ${info.location.name}`;
     }
     
 // Cuando el usuario hace click en <span> (x), se cierra el modal

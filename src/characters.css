@@ -235,10 +235,13 @@
 
 /* Modal Content */
 .modal-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: #C4C4C4;
   color: #000;
   margin: auto;
-  padding: 20px;
+  padding: 2vw;
   border: 1px solid #888;
   width: 40%;
   border-radius: 50px;
@@ -247,9 +250,10 @@
 /* The Close Button */
 .close {
   color: #aaaaaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
+  display: flex;
+  align-self: flex-start;
 }
 
 .close:hover,
@@ -257,6 +261,26 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modalImg{
+  width: 13vw;
+  height: 25vh;
+  border: 1px solid #000000;
+}
+
+.modalInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+  font-size: 3vh;
+}
+
+.modalName{
+display: flex;
+font-family: Roboto;
+margin-bottom: 2vh;
+font-size: 5vh;
 }
 
     /* //responsive// */
@@ -363,6 +387,29 @@
           flex-direction: row;
           justify-content: center;
      }
+
+     .modal-content {
+      margin: auto;
+      padding: 4vw;
+      width: 65%;
+    }
+
+    .modalImg{
+      width: 28vw;
+      height: 20vh;
+      border: 1px solid #000000;
+      }
+
+      .modalInfo{
+      margin-left: 3vw;
+      font-size: 2.5vh;
+      }
+
+      .modalName{
+      margin-bottom: 0vh;
+      font-size: 3.5vh;
+      }
+
  }
 
     @media only screen and (max-width: 414px) {
@@ -463,6 +510,30 @@
         .selectOrder{
           margin-top: 7.7vh;
         }
+
+        .modal-content {
+          margin: auto;
+          padding: 5vw;
+          width: 65%;
+        }
+
+        .modalImg{
+  width: 25vw;
+  height: 15vh;
+  border: 1px solid #000000;
+}
+
+.modalInfo{
+  margin-left: 4vw;
+  font-size: 2vh;
+}
+
+.modalName{
+margin-bottom: 0vh;
+font-size: 2.5vh;
+}
+
+        
  }
   
  
