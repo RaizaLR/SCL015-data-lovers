@@ -140,7 +140,10 @@ function searchCharacter(){
   if(searchBar.value !== ""){
     let searchInfo = info.filter(e => e.name.includes(searchBar.value));
   info = searchInfo;
- return addAllCharacters(info);
+ return addAllCharacters(info);}
+ else if(searchBar.value === ""){
+  info = data.results;
+  return addAllCharacters(info);
 }}
 
 
