@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Rick and Morty for Dummies</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="characters.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
-    <main class="flexcontainer">
+<head>
+  <meta charset="utf-8">
+  <title>Rick and Morty for Dummies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="characters.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="flexcontainer">
     <section class="charactersSection" id="charactersSection">
-   
-        <header class="header">
-          <div class="selectOrder">
+
+      <header class="header">
+        <div class="selectOrder">
           <label for="order" class="select">Ordenar:</label>
           <select name="order" id="select" class="selectOptions">
             <option value="select">Seleccionar</option>
             <option value="alphAscending" id="alphAscending">Alfabéticamente (A-Z)</option>
             <option value="alphDescending">Alfabéticamente (Z-A)</option>
           </select>
-          </div>
-          <div class="title">
-            <h1 class="charactersTitle">Personajes</h1>
-          </div>
-      <div class="right">
-        <div class="backButtons">
-          <a href="index.html" class="Btn one" id="backBtn">Volver</a>
-          <a href="" class="Btn one">Episodios</a>
         </div>
-        <form>
-          <input type="text" name="search" value="Buscar" class="search" id="search">
-        </form>
-      </div>
-        </header>
+        <div class="title">
+          <h1 class="charactersTitle">Personajes</h1>
+        </div>
+        <div class="right">
+          <div class="backButtons">
+            <a href="index.html" class="Btn one" id="backBtn">Volver</a>
+            <a href="" class="Btn one">Episodios</a>
+          </div>
+          <form>
+            <input type="text" name="search" value="Buscar" class="search" id="search">
+          </form>
+        </div>
+      </header>
 
-        <div class = "centercontent">
-          <div class="aside">
+      <div class="centercontent">
+        <div class="aside">
           <aside class="filters">
             <h2 class="filtersTitle">Filtrar:</h2> <br>
             <p><strong>&nbsp;&nbsp;Especie</strong></p><br>
@@ -52,32 +53,32 @@
             <input type="checkbox" id="unknown" name="gender" value="unknown" class="checkbox">
             <label for="unknown"> Género desconocido</label>
           </aside>
-           </div>
-            <div class="box" id="table">
-            </div>
+        </div>
+        <div class="box" id="table">
+        </div>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <img id="modalImage" class="modalImg">
+          <div class="modalInfo">
+            <p id="modalName" class="modalName"></p>
+            <p id="modalStatus"></p>
+            <p id="modalSpecie"></p>
+            <p id="modalGender"></p>
+            <p id="modalLocation"></p>
           </div>
+          <span class="close">&times;</span>
+        </div>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+      </div>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <img id="modalImage" class="modalImg">
-    <div class="modalInfo">
-    <p id="modalName" class="modalName"></p>
-    <p id="modalStatus"></p>
-    <p id="modalSpecie"></p>
-    <p id="modalGender"></p>
-    <p id="modalLocation"></p>
-  </div>
-    <span class="close">&times;</span>
-  </div>
-
-</div>
-  
     </section>
-</main>
-    <script src="main.js" type="module"></script>
+  </main>
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>

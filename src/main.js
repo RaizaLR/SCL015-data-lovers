@@ -136,15 +136,17 @@ function humanFilterInfo() {
 //BUSCAR//
 let searchBar = document.getElementById("search");
 searchBar.addEventListener("keyup", searchCharacter)
-function searchCharacter(){
-  if(searchBar.value !== ""){
+function searchCharacter() {
+  if (searchBar.value !== "") {
     let searchInfo = info.filter(e => e.name.includes(searchBar.value));
-  info = searchInfo;
- return addAllCharacters(info);}
- else if(searchBar.value === ""){
-  info = data.results;
-  return addAllCharacters(info);
-}}
+    info = searchInfo;
+    return addAllCharacters(info);
+  }
+  else if (searchBar.value === "") {
+    info = data.results;
+    return addAllCharacters(info);
+  }
+}
 
 
 //modal//
