@@ -134,19 +134,16 @@ function humanFilterInfo() {
 
 
 //BUSCAR//
+
 let searchBar = document.getElementById("search");
-searchBar.addEventListener("keyup", searchCharacter)
 function searchCharacter() {
-  if (searchBar.value !== "") {
-    let searchInfo = info.filter(e => e.name.includes(searchBar.value));
+  let texto = document.getElementById("search").value;
+    let searchInfo = info.filter(e => e.name.includes(texto));
     info = searchInfo;
     return addAllCharacters(info);
-  }
-  else if (searchBar.value === "") {
-    info = data.results;
-    return addAllCharacters(info);
-  }
 }
+searchBar.addEventListener("keyup", searchCharacter);
+
 
 
 //modal//
