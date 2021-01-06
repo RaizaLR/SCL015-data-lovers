@@ -132,18 +132,15 @@ function humanFilterInfo() {
   }
 }
 
-
-//BUSCAR//
-
 let searchBar = document.getElementById("search");
-function searchCharacter() {
-  let texto = document.getElementById("search").value;
-    let searchInfo = info.filter(e => e.name.includes(texto));
-    info = searchInfo;
-    return addAllCharacters(info);
-}
-searchBar.addEventListener("keyup", searchCharacter);
 
+function search() {
+  let text = searchBar.value;
+  let array = functions.searchCharacter(info, text);
+  // info = array;
+  addAllCharacters(array);}
+  
+  searchBar.addEventListener("keyup",  search);
 
 
 //modal//
