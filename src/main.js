@@ -137,9 +137,7 @@ let searchBar = document.getElementById("search");
 function search() {
   let text = searchBar.value;
   let array = functions.searchCharacter(info, text);
-  // info = array;
   addAllCharacters(array);}
-  
   searchBar.addEventListener("keyup",  search);
 
 
