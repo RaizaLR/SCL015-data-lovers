@@ -1,0 +1,216 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .flexcontainer {
+    display: flex;
+    background-image: url(img/Group.svg);
+    max-width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .charactersSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+ 
+  .title{
+      display: flex;
+      align-self: center;
+      justify-content: flex-start;
+  }
+
+  .charactersTitle {
+    font-size: 10vh;
+    margin-bottom: 2%;
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start ;
+    
+  }
+  
+  .backButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+   margin-right: 10vw;
+  }
+  
+  .Btn {
+    display: flex;
+    width: 8.3vw;
+    height: 0.8vh;
+    text-decoration: none;
+    background: #C4C4C4;
+    border-bottom: 5px solid #48424d;
+    box-shadow: 5px 5px 5px #999;
+    color: #000000;
+    cursor: pointer;
+    font-family: 'Raleway', Arial, Helvetica;
+    font-size: 1.5vw;
+    padding: 1%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease 0s;
+  }
+  
+  .Btn:hover {
+    background: rgb(221, 219, 219);
+  }
+  
+  .Btn:active {
+    box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #fff;
+    border-bottom: 1px solid #9b979c;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff;
+    transform: translateY(4px);
+    transition: all 0.1s ease 0s;
+    color: #ffffff;
+  }
+  
+  .centercontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+  }
+  
+  .box {
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .box {
+    overflow-y: scroll;
+  }
+  
+  .cell {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4vh;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    width: 47.7%;
+    height: 20%;
+    background: rgba(196, 196, 196, 0.7);
+    border: 1px solid #000000;
+  }
+  
+  .cell:hover {
+    cursor: pointer;
+    background-color: #C4C4C4;
+  }
+  
+  
+  /* //responsive// */
+  
+  @media only screen and (max-width: 768px) {
+    .box {
+      width: 55vw;
+      height: 70vh;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  
+    .charactersTitle {
+      display: flex;
+      font-size: 4vh;
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+      align-items: center;
+    }
+    .cell {
+      color: #000000;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2.5vh;
+      display: flex;
+      align-items: center;
+      padding-left: 0.5%;
+      width: 100%;
+      height: 20%;
+      background: rgba(196, 196, 196, 0.7);
+      border: 1px solid #000000;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: center;
+    }
+    
+  
+  @media only screen and (max-width: 414px) {
+    .box {
+      width: 55vw;
+      height: 70vh;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .centercontent {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .charactersTitle {
+      display: flex;
+      font-size: 3vh;
+      margin-left: 2vw;
+      margin-right: 2vw;
+      align-items: center;
+    }
+    .cell {
+      color: #000000;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2.5vh;
+      display: flex;
+      align-items: center;
+      padding-left: 0.5%;
+      width: 95%;
+      height: 20%;
+      background: rgba(196, 196, 196, 0.7);
+      border: 1px solid #000000;
+    }
+   
+    .header {
+      display: flex;
+      justify-content: center;
+    }
+ 
+    .Btn {
+      display: flex;
+      width: 20vw;
+      height: 2vh;
+      color: #000000;
+      font-size: 2vh;
+      padding: 1%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+    .backButtons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4vh;
+    }
+}}
