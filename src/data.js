@@ -8,8 +8,6 @@ const functions = {
       if (a.name < b.name) {
         return -1;
       }
-      // a debe ser igual a b
-      return 0
     });
     return orderedInfo;
   },
@@ -17,13 +15,11 @@ const functions = {
   orderZA(info) {
     let orderedInfo = info.sort(function (a, b) {
       if (a.name < b.name) {
-        return 1
+        return 1;
       }
       if (a.name > b.name) {
-        return -1
+        return -1;
       }
-      // a debe ser igual a b
-      return 0
     });
     return orderedInfo;
   },
@@ -31,13 +27,11 @@ const functions = {
   orderDefault(info) {
     let orderedInfo = info.sort(function (a, b) {
       if (a.id > b.id) {
-        return 1
+        return 1;
       }
       if (a.id < b.id) {
-        return -1
+        return -1;
       }
-      // a debe ser igual a b
-      return 0;
     });
     return orderedInfo;
   },
@@ -51,6 +45,10 @@ const functions = {
     let genderArray = info.filter(e => e.gender === gender);
     return genderArray;
   },
+  searchCharacter(info, text) {
+    let searchArray = info.filter(e => e.name.includes(text));
+    return searchArray;
+  }
 }
 
 export default functions;
