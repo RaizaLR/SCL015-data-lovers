@@ -5,7 +5,8 @@ const functions = {
       if (a.name > b.name) {
         return 1;
       }
-      if (a.name < b.name) {
+      // if (a.name < b.name) 
+      { 
         return -1;
       }
     });
@@ -14,10 +15,7 @@ const functions = {
 
   orderZA(info) {
     let orderedInfo = info.sort(function (a, b) {
-      if (a.name < b.name) {
-        return 1;
-      }
-      if (a.name > b.name) {
+      if (a.name > b.name){
         return -1;
       }
     });
@@ -29,7 +27,8 @@ const functions = {
       if (a.id > b.id) {
         return 1;
       }
-      if (a.id < b.id) {
+      // if (a.id < b.id) 
+      {
         return -1;
       }
     });
@@ -48,6 +47,11 @@ const functions = {
   searchCharacter(info, text) {
     let searchArray = info.filter(e => e.name.includes(text));
     return searchArray;
+  },
+  computeStats(info, array){
+    let computeSpecies = ((array.length)/(info.length))*100;
+    computeSpecies = computeSpecies.toFixed(0);
+    return computeSpecies;
   }
 }
 
