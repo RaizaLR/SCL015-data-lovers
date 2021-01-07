@@ -222,32 +222,19 @@ input[type=checkbox]+label:hover {
   font-weight: 1000;
 }
 
-/* The Modal (background) */
-
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
-
-/* Modal Content */
 
 .modal-content {
   display: flex;
@@ -261,8 +248,6 @@ input[type=checkbox]+label:hover {
   width: 40%;
   border-radius: 50px;
 }
-
-/* The Close Button */
 
 .close {
   color: #aaaaaa;
@@ -297,8 +282,6 @@ input[type=checkbox]+label:hover {
   margin-bottom: 2vh;
   font-size: 5vh;
 }
-
-/* //responsive// */
 
 @media only screen and (max-width: 768px) {
   .box {
