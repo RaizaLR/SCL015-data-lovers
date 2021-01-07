@@ -80,3 +80,13 @@ describe('functions.searchCharacter', () => {
     expect(functions.searchCharacter(characters, "B")).toEqual([{name: "Bobby Moynihan", id: 2, species: "Human", gender: "Male"}]);
   });
 });
+
+  describe('functions.computeStats', () => {
+    it('is a function', () => {
+      expect(typeof functions.computeStats).toBe('function');
+    });
+  
+    it('should return Stats with characters Species', () => {
+      expect(functions.computeStats(characters, "Alien")).toEqual("125");
+    });
+});

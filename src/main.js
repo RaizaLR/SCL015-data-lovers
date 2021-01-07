@@ -137,8 +137,29 @@ let searchBar = document.getElementById("search");
 function search() {
   let text = searchBar.value;
   let array = functions.searchCharacter(info, text);
-  addAllCharacters(array);}
-  searchBar.addEventListener("keyup",  search);
+  addAllCharacters(array);
+}
+searchBar.addEventListener("keyup", search);
+
+//calculo
+window.addEventListener("load", computeStats)
+function computeStats() {
+  let arrayAlien = functions.speciesFilter(info, "Alien");
+  let computeAlien = functions.computeStats(info, arrayAlien);
+  document.getElementById("computeAlien").innerHTML = `(${computeAlien}%)`;
+  let humanArray = functions.speciesFilter(info, "Human");
+  let computeHumans = functions.computeStats(info, humanArray);
+  document.getElementById("computeHuman").innerHTML = `(${computeHumans}%)`;
+  let femaleArray = functions.genderFilter(info, "Female");
+  let computeFemales = functions.computeStats(info, femaleArray);
+  document.getElementById("computeFemale").innerHTML = `(${computeFemales}%)`;
+  let maleArray = functions.genderFilter(info, "Male");
+  let computeMales = functions.computeStats(info, maleArray);
+  document.getElementById("computeMale").innerHTML = `(${computeMales}%)`;
+  let unkArray = functions.genderFilter(info, "unknown");
+  let computeUnk = functions.computeStats(info, unkArray);
+  document.getElementById("computeUnk").innerHTML = `(${computeUnk}%)`;
+}
 
 
 //modal//
