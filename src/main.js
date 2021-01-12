@@ -145,19 +145,19 @@ searchBar.addEventListener("keyup", search);
 window.addEventListener("load", computeStats)
 function computeStats() {
   let arrayAlien = functions.speciesFilter(info, "Alien");
-  let computeAlien = functions.computeStats(info, arrayAlien);
+  let computeAlien = functions.computeStats(arrayAlien);
   document.getElementById("computeAlien").innerHTML = `(${computeAlien}%)`;
   let humanArray = functions.speciesFilter(info, "Human");
-  let computeHumans = functions.computeStats(info, humanArray);
+  let computeHumans = functions.computeStats(humanArray);
   document.getElementById("computeHuman").innerHTML = `(${computeHumans}%)`;
   let femaleArray = functions.genderFilter(info, "Female");
-  let computeFemales = functions.computeStats(info, femaleArray);
+  let computeFemales = functions.computeStats(femaleArray);
   document.getElementById("computeFemale").innerHTML = `(${computeFemales}%)`;
   let maleArray = functions.genderFilter(info, "Male");
-  let computeMales = functions.computeStats(info, maleArray);
+  let computeMales = functions.computeStats(maleArray);
   document.getElementById("computeMale").innerHTML = `(${computeMales}%)`;
   let unkArray = functions.genderFilter(info, "unknown");
-  let computeUnk = functions.computeStats(info, unkArray);
+  let computeUnk = functions.computeStats(unkArray);
   document.getElementById("computeUnk").innerHTML = `(${computeUnk}%)`;
 }
 
