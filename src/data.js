@@ -50,8 +50,8 @@ const functions = {
     let searchArray = info.filter(e => e.name.includes(text));
     return searchArray;
   },
-  computeStats(info, array){
-    let computeSpecies = ((array.length)/(info.length))*100;
+  computeStats(array){
+    let computeSpecies = ((array.length)/(493))*100;
     computeSpecies = computeSpecies.toFixed(0);
     return computeSpecies;
   }
